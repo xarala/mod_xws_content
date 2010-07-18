@@ -3,7 +3,7 @@
   defined('_JEXEC') or die('Restricted access'); 
 ?>
 
-<div id = "xhr-tabs">
+<div id = "xwsTabs<?php echo $module->id; ?>">
   <ul class=" <?php echo $params->get('moduleclass_sfx'); ?>">
     <?php foreach ($list as $item) : ?>
 	    <li class="<?php echo $params->get('moduleclass_sfx'); ?>">
@@ -22,4 +22,3 @@
     </div>
   <?php endforeach; ?>
 </div>
-<?php echo print_r($list); ?>

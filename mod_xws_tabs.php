@@ -43,9 +43,9 @@
   }
   
 // load jquery ui css assets
-    JHTML::stylesheet('core.css', $style, array());
-    JHTML::stylesheet('theme.css', $style, array());
-    JHTML::stylesheet($moduleFunctionalityStyling, $style , array());
+  JHTML::stylesheet('core.css', $style, array());
+  JHTML::stylesheet('theme.css', $style, array());
+  JHTML::stylesheet($moduleFunctionalityStyling, $style , array());
     
 // require the template
   require(JModuleHelper::getLayoutPath('mod_xws_tabs', $template.DS.'default'));

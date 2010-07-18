@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <install type="module" version="1.5.0">
+
 	<name>xws_tabs</name>
 	<author>Xarala Web Studios</author>
 	<creationDate>May 2010</creationDate>
@@ -7,15 +8,17 @@
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<authorEmail>dev-team@@xarala.sn</authorEmail>
 	<authorUrl>www.xarala.sn</authorUrl>
-	<version>0.0.3</version>
+	<version>0.0.4</version>
 	<description>xws tabs is a component by Xarala Web Studios</description>
 	
 	<files>
-		<filename module="mod_xws_tabs">mod_xws_tabs.php</filename>
-		<filename module="mod_xws_tabs">helper.php</filename>
 		<filename module="mod_xws_tabs">index.html</filename>
-    <folder>tmpl</folder>
+		<filename module="mod_xws_tabs">helper.php</filename>
+		<filename module="mod_xws_tabs">mod_xws_tabs.php</filename>
+    <folder>css</folder>
     <folder>elements</folder>
+    <folder>js</folder>
+    <folder>tmpl</folder>
 	</files>
 	
 	<params addpath="/modules/mod_xws_tabs/elements/">

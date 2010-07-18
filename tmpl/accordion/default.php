@@ -3,7 +3,7 @@
   defined('_JEXEC') or die('Restricted access'); 
 ?>
 
-<div id = "accordionModule<?php echo $module->id; ?>">
+<div id = "xwsAccordionModule<?php echo $module->id; ?>">
   <?php foreach ($list as  $item) : ?>
     <h3><?php echo $item->title; ?></h3>    
     <div id="<?php echo $index; ?>">
@@ -14,3 +14,11 @@
     </div>
   <?php endforeach; ?>
 </div>
+<script type="text/javascript" language="javascript" charset="utf-8">
+// <![CDATA[
+  $(document).ready(function(){
+    $.noConflict();
+    jQuery.xwsUiHelpers.enableAccordions();
+  });
+// ]]>
+</script>
