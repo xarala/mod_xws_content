@@ -2,7 +2,7 @@
 /* 
  * @name xws_content
  * @package joomla
- * @version 0.0.1 
+ * @version 0.0.3
  * @author Papa Pathé Séne - Xarala Web Studios Sénégal http://www.xarala.sn
  *
  * Copyright 2010, Papa Pathé Séne - Xarala Web Studios Sénégal
