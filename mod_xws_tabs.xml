@@ -21,6 +21,10 @@
     <folder>tmpl</folder>
 	</files>
 	
+  <languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.mod_xws_tabs.ini</language>
+  </languages>
+	
 	<params addpath="/modules/mod_xws_tabs/elements/">
 		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
 		<param name="getTemplate" type="moduletemplate" modulename="mod_xws_tabs" default="accordion" label="XWS_CONTENT_GET_TEMPLATE_LABEL" description="XWS_CONTENT_GET_TEMPLATE_DESC" />

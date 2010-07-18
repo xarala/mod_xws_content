@@ -9,7 +9,7 @@
     <div id="<?php echo $index; ?>">
 	    <p><?php echo $item->introtext; ?></p>
 	    <a href="<?php echo $item->link; ?>" class="readon"title = "<?php echo $item->title; ?>" >
-        <span><?php echo Jtext::_("xhr_tabs_readmore"); ?></span>
+        <span><?php echo Jtext::_("XWS_CONTENT_READ_MORE"); ?></span>
       </a>
     </div>
   <?php endforeach; ?>
