@@ -25,6 +25,7 @@
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param>
+		<param name="getStyle" type="csstemplate" modulename="mod_xws_tabs" default="base" label="XWS_CONTENT_GET_STYLE_LABEL" description="XWS_CONTENT_GET_STYLE_DESC" />
 		<param name="@spacer" type="spacer" default="" label="" description="" />
 		<param name="show_front" type="radio" default="1" label="XWS_CONTENT_SHOW_FRONT_LABEL" description="XWS_CONTENT_SHOW_FRONT_DESC">
 			<option value="1">show</option>

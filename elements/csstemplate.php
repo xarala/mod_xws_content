@@ -10,31 +10,18 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-class JElementModuletemplate extends JElement {
+class JElementCssTemplate extends JElement {
 
-	var $_name = 'moduletemplate';
+	var $_name = 'csstemplate';
 
 	function fetchElement($name, $value, &$node, $control_name) {
 
 		jimport('joomla.filesystem.folder');
 
 		$moduleName = $node->_attributes['modulename'];
-		$moduleTemplatesPath = JPATH_SITE.DS.'modules'.DS.$moduleName.DS.'tmpl';
+		$moduleTemplatesPath = JPATH_SITE.DS.'modules'.DS.$moduleName.DS.'css';
 		$moduleTemplatesFolders = JFolder::folders($moduleTemplatesPath);
-
-		$db =& JFactory::getDBO();
-		$query = "SELECT template FROM #__templates_menu WHERE client_id = 0 AND menuid = 0";
-		$db->setQuery($query);
-		$defaultemplate = $db->loadResult();
-		$templatePath = JPATH_SITE.DS.'templates'.DS.$defaultemplate.DS.'html'.DS.$moduleName;
-
-		if (JFolder::exists($templatePath)){
-			$templateFolders = JFolder::folders($templatePath);
-			$folders = @array_merge($templateFolders, $moduleTemplatesFolders);
-			$folders = @array_unique($folders);
-		} else {
-			$folders = $moduleTemplatesFolders;
-		}
+		$folders = $moduleTemplatesFolders;
 
 		$exclude = 'Default';
 		$options = array ();
