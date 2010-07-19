@@ -20,13 +20,15 @@ jQuery.xwsUiHelpers = {
      
   --------------------------------------------------------------------*/ 
 	enableTabs: function() { 
-	  
+	  // select all divs with id beginning by xwstabs
 	  tabIzables = jQuery('div[id^=xwsTabs]');	
 	  
+	  // options for the tabs
 	  options = {
 	     collapsible: true 
 	  }
 	  
+	  // for each tabIzables tabify it with the options 
 	  tabIzables.each(function(){
 	    jQuery(this).tabs(options);
 	  });
