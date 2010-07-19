@@ -20,7 +20,17 @@ jQuery.xwsUiHelpers = {
      
   --------------------------------------------------------------------*/ 
 	enableTabs: function() { 
-	  tabIzables = $('div[id^=xwsTabs]');	
+	  
+	  tabIzables = jQuery('div[id^=xwsTabs]');	
+	  
+	  options = {
+	     collapsible: true 
+	  }
+	  
+	  tabIzables.each(function(){
+	    jQuery(this).tabs(options);
+	  });
+	  
 	}, 
 
 
@@ -31,7 +41,7 @@ jQuery.xwsUiHelpers = {
   --------------------------------------------------------------------*/  
 	enableAccordions: function() { 
 	
-	  // Selection de tous les éléments avec l'atrribut id commencant par accordion
+	  // Selection de tous les éléments avec l'atrribut id commencant par xwsAccordion
 	  accordionIzables = jQuery('div[id^=xwsAccordion]');
 
     //console.log(accordionIzables);
