@@ -1,6 +1,6 @@
 <?php
 /* 
- * @name xws_content
+ * Xws_Content Joomla Module
  * @package xws_content
  * @version 0.0.3
  * @author Papa Pathé Séne - Xarala Web Studios Sénégal http://www.xarala.sn
@@ -10,7 +10,7 @@
  *
  * Date: sam. 17 juil. 2010 23:35:32 GMT 
  *
- *--------------------------------------------------------------------------------------------- /
+ *--------------------------------------------------------------------------------------------- */
 
 /* No direct access to joomla filesystem
  * ---------------------------------------------------------------------- */
@@ -60,16 +60,15 @@
  * ----------------------------------------------------------------------------------------- */
   if ($params->get('load_jquery_ui_stylesheets') == 1)  {
   
-  // Set the user desired theme  
-    $style = _XWS_CONTENT_CSS_PATH.DS.$params->get('getStyle').DS;
-     
-  // Set the module functionality styling
-  // each functionality has its own css file
-    $moduleFunctionalityStyling = $moduleTemplate.'.css';
+    /* Set the user desired theme  
+     * Load the user desired theme
+     *------------------------------------------------------------------------- */
+      $style = _XWS_CONTENT_CSS_PATH.DS.$params->get('getStyle').DS;    
+      JHTML::stylesheet('jquery-ui.css', $style, array());   
 
-    JHTML::stylesheet('core.css', $style, array());
-    JHTML::stylesheet('theme.css', $style, array());
-    JHTML::stylesheet($moduleFunctionalityStyling, $style , array());   
+    /* Load the xws content overrides for jquery ui  
+     *------------------------------------------------------------------------- */
+      JHTML::stylesheet('xws-content.css', _XWS_CONTENT_CSS_PATH, array());
      
   }
 

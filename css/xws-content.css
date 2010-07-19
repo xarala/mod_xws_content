@@ -1,0 +1,25 @@
+/* 
+ * Xws_Content Joomla Module 
+ * This file override some definitions from jquery ui stylesheets
+ * @package xws_content
+ * @version 0.0.3
+ * @author Papa Pathé Séne - Xarala Web Studios Sénégal http://www.xarala.sn
+ *
+ * Copyright 2010, Papa Pathé Séne - Xarala Web Studios Sénégal
+ * Licensed under GPL licence
+ *
+ * Date: sam. 17 juil. 2010 23:35:32 GMT 
+ *
+ *--------------------------------------------------------------------------------------------- */
+
+/* Readmore Link
+--------------------------------------*/
+.ui-accordion a.readon, .ui-tabs a.readon {
+  float: right;
+  font-size: 1.1em;  
+}
+
+.ui-accordion .ui-accordion-header {
+  padding-left: 25px;
+  font-size: 150%;
+}
