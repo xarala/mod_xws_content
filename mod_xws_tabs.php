@@ -13,33 +13,34 @@
  *--------------------------------------------------------------------------------------------- */
 
 /* No direct access to joomla filesystem
- * ---------------------------------------------------------------------- */
+ * ------------------------------------------------------------------------------------------- */
   defined('_JEXEC') or die('Restricted access');
 
 /* Definition of XwsJoomla constants
- *------------------------------------------------------------------------ */
+ *-------------------------------------------------------------------------------------------- */
   define('_XWS_CONTENT_PATH', 'modules'.DS.'mod_xws_tabs');
   define('_XWS_CONTENT_JS_PATH', _XWS_CONTENT_PATH.DS.'js'.DS);
   define('_XWS_CONTENT_CSS_PATH', _XWS_CONTENT_PATH.DS.'css'.DS);
 
 /* Include the helper only once
- *------------------------------------------------------------------------ */
+ *-------------------------------------------------------------------------------------------- */
   require_once (dirname(__FILE__).DS.'helper.php');
 
 /* Get the list of articles
- *-------------------------------------------------------------------------- */
+ *-------------------------------------------------------------------------------------------- */
   $list = modXwsTabsHelper::getList($params);
 
 
 /* Get user desired template
- * ------------------------------------------------------------------------------------ */
+ * ------------------------------------------------------------------------------------------- */
     $moduleTemplate = $params->get('getTemplate','accordion');
 
 /* Load javascript assets
+ * Check for environment parameter to load files locally or by google ajax apis
  * load jquery library
  * load jquery-ui library
  * load xwsUiHelpers
- * ------------------------------------------------------------------------------------ */
+ * ------------------------------------------------------------------------------------------- */
   if ($params->get('load_jquery') == 1) {
     if ($params->get('environment') == 0) {
       JHTML::script('jquery-1.4.2.js', _XWS_CONTENT_JS_PATH, false);
@@ -59,17 +60,12 @@
   }
 
   if ($params->get('load_xws_helpers') == 1) {
-    if ($params->get('environment') == 0) {
-      JHTML::script('jquery.xws.uiHelpers.js', _XWS_CONTENT_JS_PATH, false);
-    }
-    else {
-
-    }
+    JHTML::script('jquery.xws.uiHelpers.js', _XWS_CONTENT_JS_PATH, false);
   }
 
 /* Load jquery ui css assets
  *
- * Set this option to no if you're using XwsJoomla Templates
+ * Check for environment parameter to load files locally or by google ajax apis
  * ------------------------------------------------------------------------------------- */
   if ($params->get('load_jquery_ui_stylesheets') == 1)  {
 
@@ -79,6 +75,9 @@
       if ($params->get('environment') == 0) {
         $style = _XWS_CONTENT_CSS_PATH.DS.$params->get('getStyle').DS;
         JHTML::stylesheet('jquery-ui.css', $style, array());
+      }
+      else {
+
       }
 
     /* Load the xws content
