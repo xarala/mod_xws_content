@@ -10,7 +10,7 @@
 	<authorUrl>www.xarala.sn</authorUrl>
 	<version>0.0.7</version>
 	<description>xws tabs is a module by Xarala Web Studios</description>
-	
+
 	<files>
 		<filename module="mod_xws_tabs">index.html</filename>
 		<filename module="mod_xws_tabs">helper.php</filename>
@@ -20,63 +20,69 @@
     <folder>js</folder>
     <folder>tmpl</folder>
 	</files>
-	
+
   <languages folder="language/en-GB">
 		<language tag="en-GB">en-GB.mod_xws_tabs.ini</language>
   </languages>
-	
+
 	<params addpath="/modules/mod_xws_tabs/elements/">
-	
+
 		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
-		
-		<param name="getTemplate" type="moduletemplate" modulename="mod_xws_tabs" default="accordion" 
-		       label="XWS_MODULE_TEMPLATE_LABEL" description="XWS_MODULE_TEMPLATE_DESC" />		
-		       
-		<param name="load_jquery_ui_stylesheets" type="radio" default="1" label="XWS_LOAD_JQUERY_UI_STYLES_LABEL" description="XWS_LOAD_JQUERY_UI_STYLES_DESC">
+
+		<param name="environment" type="radio" default="0" label="XWS_ENVIRONMENT_LABEL" description="XWS_ENVIRONMENT_DESC">
+			<option value="0">development</option>
+			<option value="1">production</option>
+		</param>
+
+		<param name="getTemplate" type="moduletemplate" modulename="mod_xws_tabs" default="accordion"
+		    label="XWS_TEMPLATE_LABEL" description="XWS_TEMPLATE_DESC" />
+
+		<param name="load_jquery_ui_stylesheets" type="radio" default="1" label="XWS_LOAD_JQUERY_STYLESHEETS_LABEL" description="XWS_LOAD_STYLESHEETS_DESC">
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param>
-		
-		<param name="getStyle" type="csstemplate" modulename="mod_xws_tabs" default="base" label="XWS_GET_STYLE_LABEL" description="XWS_GET_STYLE_DESC" />
-		
+
+		<param name="getStyle" type="csstemplate" modulename="mod_xws_tabs" default="south-street" label="XWS_GET_STYLE_LABEL" description="XWS_GET_STYLE_DESC" />
+
 		<param name="@spacer" type="spacer" default="" label="" description="" />
-		
+
 		<param name="load_jquery" type="radio" default="1" label="XWS_LOAD_JQUERY_LABEL" description="XWS_LOAD_JQUERY_DESC">
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param>
-		
+
 		<param name="load_jquery_ui" type="radio" default="1" label="XWS_LOAD_JQUERY_UI_LABEL" description="XWS_LOAD_JQUERY_UI_DESC">
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param>
-		
+
 		<param name="load_xws_helpers" type="radio" default="1" label="XWS_LOAD_XWS_HELPERS_LABEL" description="XWS_LOAD_XWS_HELPERS_DESC">
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param>
-		
+
 		<param name="@spacer" type="spacer" default="" label="" description="" />
 		<param name="show_front" type="radio" default="1" label="XWS_SHOW_FRONT_LABEL" description="XWS_SHOW_FRONT_DESC">
 			<option value="1">show</option>
 			<option value="0">hide</option>
 		</param>
-		
+
 		<param name="count" type="text" default="5" label="XWS_COUNT_OF_ITEMS_LABEL" description="XWS_COUNT_OF_ITEMS_DESC" />
 		<param name="catid" type="category" default="" label="XWS_CATEGORY_LABEL" description="XWS_CATEGORY_DESC" />
 		<param name="secid" type="section" default="" label="XWS_SECTION_LABEL" description="XWS_SECTION_DESC" />
-		
+
 	</params>
-	
+
 	<params group="advanced">
-	
+
 		<param name="cache" type="list" default="1" label="XWSACHING_LABEL" description="XWSACHING_DESC">
 			<option value="1">Use global</option>
 			<option value="0">No caching</option>
 		</param>
-		
+
 		<param name="cache_time" type="text" default="900" label="XWSACHE_TIME_LABEL" description="XWSACHE_TIME_DESC" />
-		
+
 	</params>
-	
+
 </install>
+
