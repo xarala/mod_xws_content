@@ -37,8 +37,10 @@
 .ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 
+
 /* Readmore Link
 --------------------------------------*/
 .ui-accordion a.readon, .ui-tabs a.readon {
-  float: right
+  float: right;
+  font-size: 1.3em;  
 }

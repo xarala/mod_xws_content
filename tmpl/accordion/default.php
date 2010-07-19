@@ -8,8 +8,10 @@
     <h3><?php echo $item->title; ?></h3>    
     <div id="<?php echo $index; ?>">
 	    <p><?php echo $item->introtext; ?></p>
-	    <a href="<?php echo $item->link; ?>" class="readon"title = "<?php echo $item->title; ?>" >
-        <span><?php echo Jtext::_("XWS_CONTENT_READ_MORE"); ?></span>
+	    <a href="<?php echo $item->link; ?>" 
+	       class="readon ui-state-default ui-corner-all"
+	       title = "<?php echo $item->title; ?>" >
+          <?php echo Jtext::_("XWS_C_READ_MORE"); ?>
       </a>
     </div>
   <?php endforeach; ?>

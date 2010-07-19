@@ -28,11 +28,20 @@
 	<params addpath="/modules/mod_xws_tabs/elements/">
 		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
 		<param name="getTemplate" type="moduletemplate" modulename="mod_xws_tabs" default="accordion" label="XWS_C_GET_TEMPLATE_LABEL" description="XWS_C_GET_TEMPLATE_DESC" />
-		<param name="load_assets" type="radio" default="1" label="XWS_C_LOAD_ASSETS_LABEL" description="XWS_C_LOAD_ASSETS_DESC">
+		<param name="getStyle" type="csstemplate" modulename="mod_xws_tabs" default="base" label="XWS_C_GET_STYLE_LABEL" description="XWS_C_GET_STYLE_DESC" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="load_jquery" type="radio" default="1" label="XWS_C_LOAD_ASSETS_LABEL" description="XWS_C_LOAD_ASSETS_DESC">
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param>
-		<param name="getStyle" type="csstemplate" modulename="mod_xws_tabs" default="base" label="XWS_C_GET_STYLE_LABEL" description="XWS_C_GET_STYLE_DESC" />
+		<param name="load_jquery_ui" type="radio" default="1" label="XWS_C_LOAD_ASSETS_LABEL" description="XWS_C_LOAD_ASSETS_DESC">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="load_xws_helpers" type="radio" default="1" label="XWS_C_LOAD_ASSETS_LABEL" description="XWS_C_LOAD_ASSETS_DESC">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
 		<param name="@spacer" type="spacer" default="" label="" description="" />
 		<param name="show_front" type="radio" default="1" label="XWS_C_SHOW_FRONT_LABEL" description="XWS_C_SHOW_FRONT_DESC">
 			<option value="1">show</option>

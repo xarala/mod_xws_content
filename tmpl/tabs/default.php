@@ -15,8 +15,10 @@
   <?php foreach ($list as  $index => $item) : ?>
     <div id="xwsTabsItem-<?php echo $index; ?>">
 	    <p><?php echo $item->introtext; ?></p>
-	    <a href="<?php echo $item->link; ?>" class="readon"title = "<?php echo $item->title; ?>" >
-        <span><?php echo Jtext::_("xhr_tabs_readmore"); ?></span>
+	    <a href="<?php echo $item->link; ?>" 
+	       class="readon ui-state-default ui-corner-all"
+	       title = "<?php echo $item->title; ?>" >
+         <?php echo Jtext::_("XWS_C_READ_MORE"); ?>
       </a>
     </div>
   <?php endforeach; ?>

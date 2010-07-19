@@ -35,13 +35,23 @@
 // each functionality has its own css file
    $moduleFunctionalityStyling = $template.'.css';
    
-// load javascript assets
-  if ($params->get('load_assets') == 1) {
-    JHTML::script('jquery-1.4.2.js', _XWS_CONTENT_JS_PATH, false);
-    JHTML::script('jquery-ui.1.8.1.js', _XWS_CONTENT_JS_PATH, false);
-    JHTML::script('jquery.xws.uiHelpers.js', _XWS_CONTENT_JS_PATH, false);          
+/* Load javascript assets
+ * 
+ *  Each javascript asset can be disabled in the module administration section
+ *  They can be disabled if you have them included in your main website template or
+ *  you're using XwsJoomla templates who have built in support for jquery and jquery-ui
+ *  and xwsUihelpers javascript librairies.
+ * ------------------------------------------------------------------------------------ */
+  if ($params->get('load_jquery') == 1) {
+    JHTML::script('jquery-1.4.2.js', _XWS_CONTENT_JS_PATH, false);         
   }
-  
+  if ($params->get('load_jquery_ui') == 1) {
+    JHTML::script('jquery-ui.1.8.1.js', _XWS_CONTENT_JS_PATH, false);         
+  }
+  if ($params->get('load_xws_helpers') == 1) {
+    JHTML::script('jquery.xws.uiHelpers.js', _XWS_CONTENT_JS_PATH, false);          
+  } 
+    
 // load jquery ui css assets
   JHTML::stylesheet('core.css', $style, array());
   JHTML::stylesheet('theme.css', $style, array());

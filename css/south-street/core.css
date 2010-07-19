@@ -40,5 +40,6 @@
 /* Readmore Link
 --------------------------------------*/
 .ui-accordion a.readon, .ui-tabs a.readon {
-  float: right
+  float: right;
+  font-size: 1.3em;  
 }
