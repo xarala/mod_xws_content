@@ -1,7 +1,7 @@
 <?php
 /* 
  * @name xws_content
- * @package joomla
+ * @package xws_content
  * @version 0.0.3
  * @author Papa Pathé Séne - Xarala Web Studios Sénégal http://www.xarala.sn
  *
@@ -9,31 +9,31 @@
  * Licensed under GPL licence
  *
  * Date: sam. 17 juil. 2010 23:35:32 GMT 
- */
+ *
+ *--------------------------------------------------------------------------------------------- /
 
-// no direct access
+/* No direct access to joomla filesystem
+ * ---------------------------------------------------------------------- */
   defined('_JEXEC') or die('Restricted access');
 
-// define some constants
+/* Definition of XwsJoomla constants
+ *------------------------------------------------------------------------ */
   define('_XWS_CONTENT_PATH', 'modules'.DS.'mod_xws_tabs');  
   define('_XWS_CONTENT_JS_PATH', _XWS_CONTENT_PATH.DS.'js'.DS);  
   define('_XWS_CONTENT_CSS_PATH', _XWS_CONTENT_PATH.DS.'css'.DS);
 
-// Include the syndicate functions only once
+/* Include the helper only once
+ *------------------------------------------------------------------------ */
   require_once (dirname(__FILE__).DS.'helper.php');
 
-// get the list of articles
+/* Get the list of articles
+ *-------------------------------------------------------------------------- */
   $list = modXwsTabsHelper::getList($params);
 
-// get user desired template
-  $template = $params->get('getTemplate','accordion');
-  
-// Set the user desired theme  
-   $style = _XWS_CONTENT_CSS_PATH.DS.$params->get('getStyle').DS;
-   
-// Set the module functionality styling
-// each functionality has its own css file
-   $moduleFunctionalityStyling = $template.'.css';
+
+/* Get user desired template
+ * ---------------------------------------------------------------------------- */
+    $moduleTemplate = $params->get('getTemplate','accordion');
    
 /* Load javascript assets
  * 
@@ -45,18 +45,36 @@
   if ($params->get('load_jquery') == 1) {
     JHTML::script('jquery-1.4.2.js', _XWS_CONTENT_JS_PATH, false);         
   }
+  
   if ($params->get('load_jquery_ui') == 1) {
     JHTML::script('jquery-ui.1.8.1.js', _XWS_CONTENT_JS_PATH, false);         
   }
+  
   if ($params->get('load_xws_helpers') == 1) {
     JHTML::script('jquery.xws.uiHelpers.js', _XWS_CONTENT_JS_PATH, false);          
   } 
     
-// load jquery ui css assets
-  JHTML::stylesheet('core.css', $style, array());
-  JHTML::stylesheet('theme.css', $style, array());
-  JHTML::stylesheet($moduleFunctionalityStyling, $style , array());
+/* Load jquery ui css assets
+ *
+ * Set this option to no if you're usins XwsJoomla Templates
+ * ----------------------------------------------------------------------------------------- */
+  if ($params->get('load_jquery_ui_stylesheets') == 1)  {
+  
+  // Set the user desired theme  
+    $style = _XWS_CONTENT_CSS_PATH.DS.$params->get('getStyle').DS;
+     
+  // Set the module functionality styling
+  // each functionality has its own css file
+    $moduleFunctionalityStyling = $moduleTemplate.'.css';
+
+    JHTML::stylesheet('core.css', $style, array());
+    JHTML::stylesheet('theme.css', $style, array());
+    JHTML::stylesheet($moduleFunctionalityStyling, $style , array());   
+     
+  }
+
     
-// require the template
-  require(JModuleHelper::getLayoutPath('mod_xws_tabs', $template.DS.'default'));
+/* Require the template
+ * --------------------------------------------------------------------------------------------- */
+  require(JModuleHelper::getLayoutPath('mod_xws_tabs', $moduleTemplate.DS.'default'));
   
