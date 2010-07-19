@@ -32,15 +32,13 @@
 
 
 /* Get user desired template
- * ---------------------------------------------------------------------------- */
+ * ------------------------------------------------------------------------------------ */
     $moduleTemplate = $params->get('getTemplate','accordion');
    
 /* Load javascript assets
- * 
- *  Each javascript asset can be disabled in the module administration section
- *  They can be disabled if you have them included in your main website template or
- *  you're using XwsJoomla templates who have built in support for jquery and jquery-ui
- *  and xwsUihelpers javascript librairies.
+ * load jquery library
+ * load jquery-ui library
+ * load xwsUiHelpers
  * ------------------------------------------------------------------------------------ */
   if ($params->get('load_jquery') == 1) {
     JHTML::script('jquery-1.4.2.js', _XWS_CONTENT_JS_PATH, false);         
@@ -56,24 +54,25 @@
     
 /* Load jquery ui css assets
  *
- * Set this option to no if you're usins XwsJoomla Templates
- * ----------------------------------------------------------------------------------------- */
+ * Set this option to no if you're using XwsJoomla Templates
+ * ------------------------------------------------------------------------------------- */
   if ($params->get('load_jquery_ui_stylesheets') == 1)  {
   
     /* Set the user desired theme  
      * Load the user desired theme
-     *------------------------------------------------------------------------- */
+     * --------------------------------------------------------------------------------- */
       $style = _XWS_CONTENT_CSS_PATH.DS.$params->get('getStyle').DS;    
       JHTML::stylesheet('jquery-ui.css', $style, array());   
 
-    /* Load the xws content overrides for jquery ui  
-     *------------------------------------------------------------------------- */
+    /* Load the xws content 
+     * This css style contains overrides for jquery ui  
+     * -------------------------------------------------------------------------------- */
       JHTML::stylesheet('xws-content.css', _XWS_CONTENT_CSS_PATH, array());
      
   }
 
     
 /* Require the template
- * --------------------------------------------------------------------------------------------- */
+ * ------------------------------------------------------------------------------------- */
   require(JModuleHelper::getLayoutPath('mod_xws_tabs', $moduleTemplate.DS.'default'));
   
