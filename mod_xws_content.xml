@@ -2,13 +2,13 @@
 <install type="module" version="1.5.0">
 
 	<name>xws_content</name>
-	<author>XwsJoomla</author>
+	<author>Xws-Joomla</author>
 	<creationDate>May 2010</creationDate>
 	<copyright>Copyright (C) 2010 Xarala Web Studios. All rights reserved.</copyright>
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<authorEmail>xws-joomla@@xarala.sn</authorEmail>
 	<authorUrl>www.xarala.sn</authorUrl>
-	<version>0.1.0</version>
+	<version>0.1.1</version>
 	<description>xws tabs is a module by Xarala Web Studios</description>
 
 	<files>
