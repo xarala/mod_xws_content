@@ -52,7 +52,7 @@
 
   if ($params->get('load_jquery_ui') == 1) {
     if ($params->get('environment') == 0) {
-      JHTML::script('jquery-ui.1.8.1.js', _XWS_CONTENT_JS_PATH, false);
+      JHTML::script('jquery-ui-1.8.2.js', _XWS_CONTENT_JS_PATH, false);
     }
     else {
          #TODO load_jquery_ui from google ajax apis
