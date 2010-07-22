@@ -73,8 +73,7 @@
      * Load the user desired theme
      * --------------------------------------------------------------------------------- */
       if ($params->get('environment') == 0) {
-        $style = _XWS_CONTENT_CSS_PATH.DS.$params->get('getStyle').DS;
-        JHTML::stylesheet('jquery-ui.css', $style, array());
+        JHTML::stylesheet('jquery-ui.css', _XWS_CONTENT_CSS_PATH.DS.$params->get('getStyle').DS, array());
       }
       else {
          #TODO load_jquery_ui_stylesheets from google ajax apis
