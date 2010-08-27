@@ -36,33 +36,23 @@
 			<option value="1">production</option>
 		</param>
 
-		<param name="getTemplate" type="moduletemplate" modulename="mod_xws_content" default="accordion"
-		    label="XWS_TEMPLATE_LABEL" description="XWS_TEMPLATE_DESC" />
+		<param name="jquery-ui-template" type="moduletemplate" modulename="mod_xws_content" default="accordion"
+		    label="XWS_JQUERY_UI_TEMPLATE_LABEL" description="XWS_JQUERY_UI_TEMPLATE_DESC" />
 
-		<param name="load_jquery_ui_stylesheets" type="radio" default="1" label="XWS_LOAD_JQUERY_STYLESHEETS_LABEL" description="XWS_LOAD_STYLESHEETS_DESC">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-
-		<param name="getStyle" type="csstemplate" modulename="mod_xws_content" default="south-street" label="XWS_GET_STYLE_LABEL" description="XWS_GET_STYLE_DESC" />
+		<param name="jquery-ui-theme" type="csstemplate" modulename="mod_xws_content" default="blitzer"
+      label="XWS_JQUERY_UI_STYLE_LABEL" description="XWS_JQUERY_UI_STYLE_DESC" />
 
 		<param name="@spacer" type="spacer" default="" label="" description="" />
 
-		<param name="load_jquery" type="radio" default="1" label="XWS_LOAD_JQUERY_LABEL" description="XWS_LOAD_JQUERY_DESC">
+		<param name="load_stylesheets" type="radio" default="1" label="XWS_LOAD_JQUERY_LABEL" description="XWS_LOAD_JQUERY_DESC">
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param>
 
-		<param name="load_jquery_ui" type="radio" default="1" label="XWS_LOAD_JQUERY_UI_LABEL" description="XWS_LOAD_JQUERY_UI_DESC">
+		<param name="load_javascripts" type="radio" default="1" label="XWS_LOAD_JQUERY_UI_LABEL" description="XWS_LOAD_JQUERY_UI_DESC">
 			<option value="1">yes</option>
 			<option value="0">no</option>
 		</param>
-
-		<param name="load_xws_helpers" type="radio" default="1" label="XWS_LOAD_XWS_HELPERS_LABEL" description="XWS_LOAD_XWS_HELPERS_DESC">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-
 		<param name="@spacer" type="spacer" default="" label="" description="" />
 		<param name="show_front" type="radio" default="1" label="XWS_SHOW_FRONT_LABEL" description="XWS_SHOW_FRONT_DESC">
 			<option value="1">show</option>
