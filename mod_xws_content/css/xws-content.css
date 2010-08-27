@@ -1,0 +1,43 @@
+/*
+ * Xws_Content Joomla Module
+ * This file override some definitions from jquery ui stylesheets
+ * @package xws_content
+ * @version 0.0.3
+ * @author Papa Pathé Séne - Xarala Web Studios Sénégal http://www.xarala.sn
+ *
+ * Copyright 2010, Papa Pathé Séne - Xarala Web Studios Sénégal
+ * Licensed under GPL licence
+ *
+ * Date: sam. 17 juil. 2010 23:35:32 GMT
+ *
+ *--------------------------------------------------------------------------------------------- */
+
+
+/* Readmore Link
+ * --------------------------------------------------------------------------------------------- */
+.ui-accordion  a.readon, .ui-tabs a.readon {
+  /* float: right; */
+  font-size: 1.1em;
+}
+
+/* Accordion Header Overrides
+ * -------------------------------------------------------------------------------------------- */
+.ui-accordion .ui-accordion-header {
+}
+/**
+ * Ui tabs Overrides for readmore buttons
+ * -------------------------------------------------------------------------------------------- */
+.ui-tabs .ui-accordion-header {
+  position: relative;
+  cursor: pointer;
+}
+.ui-tabs .ui-accordion-header a {
+  padding-left: 2.2em;
+}
+.ui-tabs .ui-accordion-header .ui-icon {
+  left:0.5em;
+  margin-top:-8px;
+  position:absolute;
+  top:50%;
+}
+

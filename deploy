@@ -1,0 +1,25 @@
+#!/bin/sh
+####################################
+#
+# Archivage du composant
+#
+####################################
+day=$(date +%A)
+
+# Création du nom de l'archive.
+archive_file="mod-xws-content-$day.tar.gz"
+
+# Affichage du commencement de la sauvegarde.
+echo "Debut de l'archivage du module"
+date
+
+# Sauvegarde à l'aide de tar.
+tar czfa $archive_file mod_xws_content
+
+# Affichage de la fin de la sauvegarde
+echo "Sauvegarde terminée"
+date
+
+# Liste détaillée des fichiers de $dest pour vérifier la taille des fichiers
+ls -lh
+
