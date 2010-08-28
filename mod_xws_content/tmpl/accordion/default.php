@@ -40,6 +40,7 @@
           <?php echo Jtext::sprintf("XWS_CONTENT_READ_MORE_ABOUT" , $item->title); ?>
         </a>
       </p>
+      <br />
     </div>
   <?php endforeach; ?>
 </div>
