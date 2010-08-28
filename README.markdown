@@ -1,5 +1,5 @@
 # MOD_XWS_CONTENT #
- * The mod_xws_content is brought to you by Xws-Joomla a brand new startup from Dakar Sénégal in West Africa.
+ * The Xws_Content joomla module is brought to you by Xws-Joomla a brand new startup from Dakar Senegal in West Africa.
 
 ## Why another content display module ##
 There are tons of modules used to display joomla articles, but xws_content takes a different approach.
@@ -13,10 +13,10 @@ The module is under nigthtly development so we expect to add more widgets
 
 ## Theming the module ##
  * jQuery Ui is a great javascript library with interesting effects & widgets. It supports also theming user interfaces.
- * The module come bundled with dozens of jQuery Ui themes. Feel free to pick the desired theme in the module administration section.
- * If the bundled themes doesn't agree with your site design your can roll your own easily  with jQuery Ui theme roller web application.
+ * The Xws_Content module come bundled with dozens of jQuery Ui themes. Feel free to pick the desired theme in the module administration section.
+ * If the bundled themes doesn't match with your site's design your can roll your own easily  with jQuery Ui theme roller web application.
  * Theming is the main advantage of using jQuery Ui for our module functionality as there is no additional css overrides required to style
-   module according to your site design. Just pick the right theme & it production ready!
+   module according to your site design. Just pick the right theme & it's production ready!
 
 ## Production Ready: YES! ##
  * The Xws_Content joomla module is optimized for production websites as it can load all javascript(jQuery & jQuery-ui) & css(jQuery-ui) from google ajax librairies.
@@ -24,5 +24,5 @@ The module is under nigthtly development so we expect to add more widgets
  * Static assets are served from multiple hosts.
 
 ## Contributors ##
- * Papa Pathé Séne Web Developer <pathe.sene@gmail.com>
+ * Papa Pathe Sene Web Developer <pathe.sene@gmail.com>
 

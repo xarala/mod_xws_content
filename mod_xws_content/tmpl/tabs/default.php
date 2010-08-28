@@ -46,14 +46,13 @@
           <?php echo Jtext::sprintf("XWS_CONTENT_READ_MORE_ABOUT" , $item->title); ?>
         </a>
       </p>
-      <br />
     </div>
   <?php endforeach; ?>
 </div>
 <script type="text/javascript" language="javascript" charset="utf-8">
   // <![CDATA[
-    $(document).ready(function(){
-      jQuery.noConflict();
+    jQuery.noConflict();
+    jQuery(document).ready(function(){
       jQuery.xwsUiHelpers.enableTabs();
       jQuery.xwsReadmore.buildButtons({
         icon: 'ui-icon-arrowstop-1-e',

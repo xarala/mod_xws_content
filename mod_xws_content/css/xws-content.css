@@ -33,5 +33,7 @@ p.xwsReadMoreWrapper {
   top: -20px;
   float: right;
   padding-right: 1em;
+  margin: 10px !important;
+  text-transform: lowercase;
 }
 

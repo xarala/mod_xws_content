@@ -12,13 +12,13 @@
 	<description>xws tabs is a module by Xarala Web Studios</description>
 
 	<files>
-		<filename module="mod_xws_content">licence.txt</filename>
 		<filename module="mod_xws_content">authors.txt</filename>
 		<filename module="mod_xws_content">index.html</filename>
 		<filename module="mod_xws_content">helper.php</filename>
 		<filename module="mod_xws_content">mod_xws_content.php</filename>
     <folder>css</folder>
     <folder>elements</folder>
+    <folder>licences</folder>
     <folder>js</folder>
     <folder>tmpl</folder>
 	</files>
