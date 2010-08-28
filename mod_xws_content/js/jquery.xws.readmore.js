@@ -58,7 +58,7 @@ jQuery.xwsReadmore = {
        * otherwise the user don't need an icon for the readmore button
        */
       if(jQuery(this).hasClass('xwsReadMoreWrapper')){
-        jQuery(this).prepend("<span class='ui-icon " + options.icon + "'></span>")
+        jQuery(this).append("<span class='ui-icon " + options.icon + "'></span>")
       };
 
       /**

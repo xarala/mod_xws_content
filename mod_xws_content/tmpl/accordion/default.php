@@ -37,7 +37,7 @@
 	    <?php echo $item->introtext; ?>
       <p class="xwsReadMoreWrapper">
 	      <a href="<?php echo $item->link; ?>" title="<?php echo $item->title; ?>" >
-          <?php echo Jtext::_("XWS_C_READ_MORE"); ?>
+          <?php echo Jtext::sprintf("XWS_CONTENT_READ_MORE_ABOUT" , $item->title); ?>
         </a>
       </p>
     </div>

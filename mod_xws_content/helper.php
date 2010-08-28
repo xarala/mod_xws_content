@@ -16,7 +16,7 @@
 
 /* Include com_content router to generate urls for articles
  * -------------------------------------------------------------------------------------------- */
-require_once (JPATH_SITE.DS.'components'.DS.'com_content'.DS.'helpers'.DS.'route.php');
+  require_once (JPATH_SITE.DS.'components'.DS.'com_content'.DS.'helpers'.DS.'route.php');
 
 
 /* Definition of XwsJoomla constants
@@ -33,8 +33,10 @@ class modXwsContentHelper
 {
 
   /**
+   * load jQuery javascript library
    *
-   * @method loadJquery
+   *
+   * @param JParameter module
    * @return void
    */
   public static function loadJquery($params) {
@@ -49,16 +51,25 @@ class modXwsContentHelper
   }
 
   /**
-   * @method loadJqueryUi
+   * loads Ui & Xws jQuery plugins
+   *
+   * load jQuery ui plugin locallly or from google's cdn
+   * load xws.uiHelpers & xws.readmore javascripts
+   *
    * @return void
+   * @param JParameter module's params object
    *
    */
-  public static function loadJqueryUi($params) {
-    if ($params->get('load_javascripts') == 1) {
-      if ($params->get('environment') == 0) {
+  public static function loadJqueryUi($params)
+  {
+    if ($params->get('load_javascripts') == 1)
+    {
+      if ($params->get('environment') == 0)
+      {
         JHTML::script('jquery-ui-1.8.2.js', _XWS_CONTENT_JS_PATH, false);
       }
-      else {
+      else
+      {
           #TODO load_jquery_ui from google ajax apis
       }
       JHTML::script('jquery.xws.uiHelpers.js', _XWS_CONTENT_JS_PATH, false);
@@ -66,13 +77,18 @@ class modXwsContentHelper
     }
   }
   /**
-   * @method loadJqueryUiStylesheets
+   * loads jQuery Ui Stylesheets
+   *
+   * load jquery ui css files locallly or from google's cdn
+   * load xws-content.css containing jquery-ui css overrides
+   * if user ask to dont load stylesheets we do nothing and let him handle that.
+   *
    * @return void
+   * @param JParameter module's params object
    *
    */
   public static function loadJqueryUiStylesheets($params) {
     if ($params->get('load_stylesheets') == 1)  {
-
     /* Set the user desired theme
      * Load the user desired theme
      * --------------------------------------------------------------------------------- */
@@ -89,7 +105,7 @@ class modXwsContentHelper
   /**
    * @method getList
    * @return JObjectList
-   * @param JParameter
+   * @param JParameter module's params object
    */
 	function getList(&$params)
   {

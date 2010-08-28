@@ -1,6 +1,8 @@
 <?php
 /*
  * Xws_Content Joomla Module
+ *
+ *
  * @package xws_content
  * @version 0.0.3
  * @author Papa Pathé Séne - Xarala Web Studios Sénégal http://www.xarala.sn
@@ -39,9 +41,11 @@
   <?php foreach ($list as  $index => $item) : ?>
     <div id="tabsItem-<?php echo $index; ?>">
       <?php echo $item->introtext; ?>
-        <a href="<?php echo $item->link; ?>" title="<?php echo $item->title; ?>" >
-          <?php echo Jtext::_("XWS_C_READ_MORE"); ?>
+      <p class="xwsReadMoreWrapper">
+	      <a href="<?php echo $item->link; ?>" title="<?php echo $item->title; ?>" >
+          <?php echo Jtext::sprintf("XWS_CONTENT_READ_MORE_ABOUT" , $item->title); ?>
         </a>
+      </p>
     </div>
   <?php endforeach; ?>
 </div>
