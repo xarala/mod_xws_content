@@ -33,22 +33,27 @@
 <div id = "xwsTabs<?php echo $module->id; ?>">
   <ul class=" <?php echo $params->get('moduleclass_sfx'); ?>">
     <?php foreach ($list as $index => $item) : ?>
-	    <li>
-	      <a href="#tabsItem-<?php echo $index; ?>" title="<?php echo $item->title; ?>" ><?php echo $item->title; ?></a>
-	    </li>
+    <li>
+      <a href="#tabsItem-<?php echo $index; ?>" title="<?php echo $item->title; ?>" ><?php echo $item->title; ?></a>
+    </li>
     <?php endforeach; ?>
   </ul>
   <?php foreach ($list as  $index => $item) : ?>
-    <div id="tabsItem-<?php echo $index; ?>">
-      <?php echo $item->introtext; ?>
-      <p class="xwsReadMoreWrapper">
-	      <a href="<?php echo $item->link; ?>" title="<?php echo $item->title; ?>" >
-          <?php echo Jtext::sprintf("XWS_CONTENT_READ_MORE_ABOUT" , $item->title); ?>
-        </a>
-      </p>
+    <div id="tabsItem-<?php echo $index; ?>" class="textContainer">
+    <?php echo $item->introtext; ?>
+    <p class="xwsReadMoreWrapper">
+      <a href="<?php echo $item->link; ?>" title="<?php echo $item->title; ?>" >
+        <?php echo Jtext::_("XWS_CONTENT_READ_MORE"); ?>
+      </a>
+    </p>
     </div>
   <?php endforeach; ?>
 </div>
+<?php
+/**
+ * Setup javascript behavior for the layout
+ */
+?>
 <script type="text/javascript" language="javascript" charset="utf-8">
   // <![CDATA[
     jQuery.noConflict();

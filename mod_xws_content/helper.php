@@ -47,9 +47,28 @@ class modXwsContentHelper
       else {
           #TODO load_jquery from google ajax apis
       }
+      JHTML::script('jquery.xws.uiHelpers.js', _XWS_CONTENT_JS_PATH, false);
+      JHTML::script('jquery.xws.readmore.js', _XWS_CONTENT_JS_PATH, false);
     }
   }
 
+  /**
+   * load jQuery tools library
+   *
+   * @see http://www.flowlayer.org
+   * @param JParameter module
+   * @return void
+   */
+  public static function loadJqueryTools($params) {
+    if ($params->get('load_javascripts') == 1) {
+      if ($params->get('environment') == 0) {
+        JHTML::script('jquery.tools.js', _XWS_CONTENT_JS_PATH, false);
+      }
+      else {
+          #TODO load jquerytools from author's cdn
+      }
+    }
+  }
   /**
    * loads Ui & Xws jQuery plugins
    *
@@ -72,8 +91,6 @@ class modXwsContentHelper
       {
           #TODO load_jquery_ui from google ajax apis
       }
-      JHTML::script('jquery.xws.uiHelpers.js', _XWS_CONTENT_JS_PATH, false);
-      JHTML::script('jquery.xws.readmore.js', _XWS_CONTENT_JS_PATH, false);
     }
   }
   /**
@@ -87,18 +104,26 @@ class modXwsContentHelper
    * @param JParameter module's params object
    *
    */
-  public static function loadJqueryUiStylesheets($params) {
-    if ($params->get('load_stylesheets') == 1)  {
+  public static function loadJqueryUiStylesheets($params, $jquerytools=false)
+  {
+    if ($params->get('load_stylesheets') == 1)
+    {
     /* Set the user desired theme
      * Load the user desired theme
      * --------------------------------------------------------------------------------- */
-      if ($params->get('environment') == 0) {
+      if ($params->get('environment') == 0)
+      {
         JHTML::stylesheet('jquery-ui.css', _XWS_CONTENT_CSS_PATH.DS.$params->get('jquery-ui-theme').DS, array());
       }
-      else {
+      else
+      {
          #TODO load_jquery_ui_stylesheets from google ajax apis
       }
       JHTML::stylesheet('xws-content.css', _XWS_CONTENT_CSS_PATH, array());
+      if($jquerytools)
+      {
+        JHTML::stylesheet('scrollable-vertical.css', _XWS_CONTENT_CSS_PATH, array());
+      }
     }
   }
 

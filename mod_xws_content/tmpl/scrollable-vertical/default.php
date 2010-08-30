@@ -2,6 +2,7 @@
 /*
  * Xws_Content Joomla Module
  * @package xws_content
+ * @subpackage layout
  * @version 0.0.3
  * @author Papa Pathé Séne - Xarala Web Studios Sénégal http://www.xarala.sn
  *
@@ -19,29 +20,36 @@
 /**
  * Load javascript assets
  * jquery
- * jquery-ui & xwsUiHelpers
+ * jquerytools
  * ----------------------------------------------------------------------------- */
   modXwsContentHelper::loadJquery($params);
-  modXwsContentHelper::loadJqueryUi($params);
+  modXwsContentHelper::loadJqueryTools($params);
 
 /* Load jquery ui css assets
  * ----------------------------------------------------------------------------- */
-  modXwsContentHelper::loadJqueryUiStylesheets($params);
+  modXwsContentHelper::loadJqueryUiStylesheets($params, true);
 
 ?>
 
-<div id = "xwsAccordionModule<?php echo $module->id; ?>">
+<div id="actions">
+  <a class="prev disabled">« Back</a><a class="next">More pictures »</a>
+</div>
+<div id="xwsScrollableVertical<?php echo $module->id; ?>" class="vertical">
+  <div class="items">
   <?php foreach ($list as  $item) : ?>
-  <h3><a href="#" rel="nofollow" title="<?php echo $item->title; ?>"><?php echo $item->title; ?></a></h3>
-  <div id="<?php echo $index; ?>" class="textContainer">
-    <?php echo $item->introtext; ?>
-    <p class="xwsReadMoreWrapper">
-      <a href="<?php echo $item->link; ?>" title="<?php echo $item->title; ?>" >
-        <?php echo Jtext::_("XWS_CONTENT_READ_MORE"); ?>
-      </a>
-    </p>
-  </div>
+   <div>
+    <div class="item ui-widget ui-widget-content textContainer">
+      <h3><?php echo $item->title; ?></h3>
+        <?php echo $item->introtext; ?>
+        <p class="xwsReadMoreWrapper">
+          <a href="<?php echo $item->link; ?>" title="<?php echo $item->title; ?>" >
+            <?php echo Jtext::_("XWS_CONTENT_READ_MORE"); ?>
+          </a>
+        </p>
+    </div>
+   </div>
   <?php endforeach; ?>
+  </div>
 </div>
 <?php
 /**
@@ -52,7 +60,9 @@
 // <![CDATA[
   jQuery.noConflict();
   jQuery(document).ready(function(){
-    jQuery.xwsUiHelpers.enableAccordions();
+    jQuery('#xwsScrollableVertical<?php echo $module->id ?>').scrollable({
+      vertical: true
+    });
     jQuery.xwsReadmore.buildButtons({
       icon: 'ui-icon-arrowstop-1-e',
       wrapper: 'p.xwsReadMoreWrapper'

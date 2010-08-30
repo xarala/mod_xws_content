@@ -12,28 +12,31 @@
  *
  *--------------------------------------------------------------------------------------------- */
 
-
 /**
- * Ui Overrides for readmore buttons
+ * ReadMore Button
  * -------------------------------------------------------------------------------------------- */
-.ui-tabs .ui-accordion-header {
+p.xwsReadMoreWrapper {
+  top: -20px;
   position: relative;
-  cursor: pointer;
+  float: right;
+  padding-right: 1em;
+  margin: 10px !important;
+  text-transform: lowercase;
 }
-.ui-tabs .ui-accordion-header a {
+p.xwsReadMoreWrapper a {
   padding-left: 2.2em;
 }
-.ui-tabs .ui-accordion-header .ui-icon {
+p.xwsReadMoreWrapper span.ui-icon {
   left:0.5em;
   margin-top:-8px;
   position:absolute;
   top:50%;
 }
-p.xwsReadMoreWrapper {
-  top: -20px;
-  float: right;
-  padding-right: 1em;
-  margin: 10px !important;
-  text-transform: lowercase;
+
+/**
+ * Text Containers Setup
+ * -------------------------------------------------------------------------------------------- */
+.textContainer {
+  text-align: justify;
 }
 

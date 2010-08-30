@@ -12,6 +12,7 @@
  */
 
 /**
+ *
  * XwsReadmore is a jQuery plugin adding style to your articles readmore buttons with jQueryUi css framework
  *
  * Example Markup
@@ -25,6 +26,7 @@
  *      wrapper: 'p.xwsReadMoreWrapper'
  *    });
  * });
+ *
  */
 jQuery.xwsReadmore = {
 
@@ -51,7 +53,7 @@ jQuery.xwsReadmore = {
       /**
        * Adds jquery ui styles and prepend empty span in the readmore link wrapper
        */
-      jQuery(this).addClass('ui-accordion-header ui-corner-all ui-state-default');
+      jQuery(this).addClass('ui-corner-all ui-state-default');
 
       /**
        * if element's classes include xwsReadMoreWrapper then prepend ui-icon

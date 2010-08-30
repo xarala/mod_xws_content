@@ -1,0 +1,48 @@
+/* root element for scrollable */
+.vertical {
+
+	/* required settings */
+	position:relative;
+	overflow:hidden;
+	height: 300px;
+}
+
+/* root element for scrollable items */
+.items {
+	position:absolute;
+	/* this time we have very large space for height */
+	height:20000em;
+	margin: 0px;
+}
+
+/* single scrollable item */
+.item {	margin:10px 0; padding:15px;	font-size:12px; height: 300px}
+
+/* elements inside single item */
+.item img { float:left;	margin-right:20px; }
+
+.item h3 { padding:0.5em 1em 0.3em;	margin: 0; font-size:16px; color:#456; font-weight:normal; }
+.item p { margin: 0;}
+/* the action buttons above the scrollable */
+#actions {
+}
+
+#actions a {
+	font-size:11px;
+	cursor:pointer;
+	color:#666;
+}
+
+#actions a:hover {
+	text-decoration:underline;
+	color:#000;
+}
+
+.disabled {
+	visibility:hidden;
+}
+
+.next {
+	float:right;
+}
+
