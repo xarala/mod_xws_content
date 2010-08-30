@@ -9,7 +9,7 @@
 	<license>GPL</license>
 	<authorEmail>pathe.sene@gmail.com</authorEmail>
 	<authorUrl>www.xarala.sn</authorUrl>
-	<version>0.6.2</version>
+	<version>0.6.3</version>
 	<description>
   <![CDATA[
     <h2>Xws_Content: displaying joomla content items made stupid simple</h2>
@@ -38,6 +38,9 @@
 <!--	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Languages Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   <languages folder="language/en-GB">
 		<language tag="en-GB">en-GB.mod_xws_content.ini</language>
+  </languages>
+  <languages folder="language/fr-FR">
+		<language tag="fr-FR">fr-FR.mod_xws_content.ini</language>
   </languages>
 
 <!--	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Parameters Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
