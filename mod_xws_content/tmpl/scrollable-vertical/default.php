@@ -34,10 +34,11 @@
 <div id="actions">
   <a class="prev disabled">« Back</a><a class="next">More pictures »</a>
 </div>
-<div id="xwsScrollableVertical<?php echo $module->id; ?>" class="vertical">
+<div id="xwsScrollableVertical<?php echo $module->id; ?>" class="vertical" style="height:<?php echo $params->get('scrollableVerticalHeight') ?>px">
   <div class="items">
   <?php foreach ($list as  $item) : ?>
-    <div class="item ui-widget ui-widget-content ui-corner-top textContainer">
+    <div class="item ui-widget ui-widget-content ui-corner-top textContainer"
+      style="height:<?php echo $params->get('scrollableVerticalItemHeight')?>px">
       <h3 class="ui-widget-header ui-corner-all"><?php echo $item->title; ?></h3>
         <?php echo $item->introtext; ?>
         <p class="xwsReadMoreWrapper">

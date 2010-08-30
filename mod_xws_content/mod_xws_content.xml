@@ -8,7 +8,7 @@
 	<license>GPL</license>
 	<authorEmail>xws-joomla@@xarala.sn</authorEmail>
 	<authorUrl>www.xarala.sn</authorUrl>
-	<version>0.5</version>
+	<version>0.6</version>
 	<description>xws tabs is a module by Xarala Web Studios</description>
 
 	<files>
@@ -43,17 +43,6 @@
       label="XWS_JQUERY_UI_STYLE_LABEL" description="XWS_JQUERY_UI_STYLE_DESC" />
 
 		<param name="@spacer" type="spacer" default="" label="" description="" />
-
-		<param name="load_stylesheets" type="radio" default="1" label="XWS_LOAD_JQUERY_LABEL" description="XWS_LOAD_JQUERY_DESC">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-
-		<param name="load_javascripts" type="radio" default="1" label="XWS_LOAD_JQUERY_UI_LABEL" description="XWS_LOAD_JQUERY_UI_DESC">
-			<option value="1">yes</option>
-			<option value="0">no</option>
-		</param>
-		<param name="@spacer" type="spacer" default="" label="" description="" />
 		<param name="show_front" type="radio" default="1" label="XWS_SHOW_FRONT_LABEL" description="XWS_SHOW_FRONT_DESC">
 			<option value="1">show</option>
 			<option value="0">hide</option>
@@ -73,6 +62,26 @@
 		</param>
 
 		<param name="cache_time" type="text" default="900" label="XWSACHE_TIME_LABEL" description="XWSACHE_TIME_DESC" />
+
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+
+		<param name="load_stylesheets" type="radio" default="1" label="XWS_LOAD_JQUERY_LABEL" description="XWS_LOAD_JQUERY_DESC">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+
+		<param name="load_javascripts" type="radio" default="1" label="XWS_LOAD_JQUERY_UI_LABEL" description="XWS_LOAD_JQUERY_UI_DESC">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+
+	</params>
+
+	<params group="other">
+
+		<param name="scrollableVerticalHeight" type="text" default="300" label="SCROLLABLE_VERTICAL_HEIGHT" description="SCROLLABLE_VERTICAL_DESC" />
+		<param name="scrollableVerticalItemHeight" type="text" default="150" label="SCROLLABLE_VERTICAL_ITEM_HEIGHT"
+          description="SCROLLABLE_VERTICAL_ITEM__DESC" />
 
 	</params>
 
