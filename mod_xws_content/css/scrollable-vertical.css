@@ -25,6 +25,7 @@
 .item p { margin: 0;}
 /* the action buttons above the scrollable */
 #actions {
+  padding-bottom: 5px;
 }
 
 #actions a {

@@ -6,10 +6,20 @@
 	<creationDate>May 2010</creationDate>
 	<copyright>Copyright (C) 2010 Xarala Web Studios. All rights reserved.</copyright>
 	<license>GPL</license>
-	<authorEmail>xws-joomla@@xarala.sn</authorEmail>
+	<authorEmail>pathe.sene@gmail.com</authorEmail>
 	<authorUrl>www.xarala.sn</authorUrl>
-	<version>0.6</version>
-	<description>xws tabs is a module by Xarala Web Studios</description>
+	<version>0.6.1</version>
+	<description>
+  <![CDATA[
+    <h2>Xws_Content: displaying joomla content items made stupid simple</h2>
+    <ul>
+      <li>Originally forked from mod_mostread.</li>
+      <li>Xws_Content let you display list of joomla core content items with fancy jquery effects</li>
+      <li>Dozen of themes are bundled</li>
+      <li>You can add more themes here</li>
+    </ul>
+  ]]>
+  </description>
 
 	<files>
 		<filename module="mod_xws_content">authors.txt</filename>

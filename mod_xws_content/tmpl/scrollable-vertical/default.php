@@ -30,15 +30,32 @@
   modXwsContentHelper::loadJqueryUiStylesheets($params, true);
 
 ?>
-
+<?php
+/**
+ * vertical scrollable previous & next buttons
+ * ----------------------------------------------------------------------------------------------------------------- */
+?>
 <div id="actions">
-  <a class="prev disabled">« Back</a><a class="next">More pictures »</a>
+  <a class="prev disabled ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary">
+    <span class="ui-button-icon-primary ui-icon ui-icon-carat-1-n"></span>
+    <span class="ui-button-text"><?php echo JText::_('PREVIOUS_SCROLLABLE_ITEM') ?></span>
+  </a>
+  <a class="next ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary">
+    <span class="ui-button-icon-primary ui-icon ui-icon-carat-1-s"></span>
+    <span class="ui-button-text"><?php echo JText::_('NEXT_SCROLLABLE_ITEM') ?></span>
+  </a>
 </div>
-<div id="xwsScrollableVertical<?php echo $module->id; ?>" class="vertical" style="height:<?php echo $params->get('scrollableVerticalHeight') ?>px">
+<?php
+/**
+ * vertical scrollable implementation
+ * ------------------------------------------------------------------------------------------------------------------------------------------------- */
+?>
+<div id="xwsScrollableVertical<?php echo $module->id; ?>" class="vertical"
+     style="height:<?php echo $params->get('scrollableVerticalHeight') ?>px" >
   <div class="items">
   <?php foreach ($list as  $item) : ?>
     <div class="item ui-widget ui-widget-content ui-corner-top textContainer"
-      style="height:<?php echo $params->get('scrollableVerticalItemHeight')?>px">
+         style="height:<?php echo $params->get('scrollableVerticalItemHeight')?>px" >
       <h3 class="ui-widget-header ui-corner-all"><?php echo $item->title; ?></h3>
         <?php echo $item->introtext; ?>
         <p class="xwsReadMoreWrapper">
