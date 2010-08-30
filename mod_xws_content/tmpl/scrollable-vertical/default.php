@@ -37,16 +37,14 @@
 <div id="xwsScrollableVertical<?php echo $module->id; ?>" class="vertical">
   <div class="items">
   <?php foreach ($list as  $item) : ?>
-   <div>
-    <div class="item ui-widget ui-widget-content textContainer">
-      <h3><?php echo $item->title; ?></h3>
+    <div class="item ui-widget ui-widget-content ui-corner-top textContainer">
+      <h3 class="ui-widget-header ui-corner-all"><?php echo $item->title; ?></h3>
         <?php echo $item->introtext; ?>
         <p class="xwsReadMoreWrapper">
           <a href="<?php echo $item->link; ?>" title="<?php echo $item->title; ?>" >
             <?php echo Jtext::_("XWS_CONTENT_READ_MORE"); ?>
           </a>
         </p>
-    </div>
    </div>
   <?php endforeach; ?>
   </div>

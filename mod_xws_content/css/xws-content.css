@@ -1,6 +1,9 @@
 /*
  * Xws_Content Joomla Module
+ *
+ *
  * This file override some definitions from jquery ui stylesheets
+ *
  * @package xws_content
  * @version 0.0.3
  * @author Papa Pathé Séne - Xarala Web Studios Sénégal http://www.xarala.sn
@@ -16,11 +19,10 @@
  * ReadMore Button
  * -------------------------------------------------------------------------------------------- */
 p.xwsReadMoreWrapper {
-  top: -20px;
+  top: 10px;
   position: relative;
   float: right;
   padding-right: 1em;
-  margin: 10px !important;
   text-transform: lowercase;
 }
 p.xwsReadMoreWrapper a {
