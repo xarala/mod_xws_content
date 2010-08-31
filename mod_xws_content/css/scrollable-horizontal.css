@@ -56,7 +56,7 @@
 
 /* prev, next, prevPage and nextPage buttons */
 a.browse {
-	background: #000 url(../img/scrollable/arrow/hori_large.png) no-repeat;
+	background: transparent url(../images/scrollable/hori_large.png) no-repeat;
 	display:block; position: relative; top: 110px;
 	width:30px;
 	height:30px;

@@ -30,8 +30,9 @@
 		<filename module="mod_xws_content">mod_xws_content.php</filename>
     <folder>css</folder>
     <folder>elements</folder>
-    <folder>licences</folder>
+    <folder>images</folder>
     <folder>js</folder>
+    <folder>licences</folder>
     <folder>tmpl</folder>
 	</files>
 
