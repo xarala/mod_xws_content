@@ -104,7 +104,7 @@ class modXwsContentHelper
    * @param JParameter module's params object
    *
    */
-  public static function loadJqueryUiStylesheets($params, $jquerytools=false)
+  public static function loadJqueryUiStylesheets($params, $jquerytools=array())
   {
     if ($params->get('load_stylesheets') == 1)
     {
@@ -119,11 +119,18 @@ class modXwsContentHelper
       {
          #TODO load_jquery_ui_stylesheets from google ajax apis
       }
+
       JHTML::stylesheet('xws-content.css', _XWS_CONTENT_CSS_PATH, array());
-      if($jquerytools)
+
+      if(true == $jquerytools['scrollable-vertical'])
       {
         JHTML::stylesheet('scrollable-vertical.css', _XWS_CONTENT_CSS_PATH, array());
       }
+      if(true == $jquerytools['scrollable-horizontal'])
+      {
+        JHTML::stylesheet('scrollable-horizontal.css', _XWS_CONTENT_CSS_PATH, array());
+      }
+
     }
   }
 

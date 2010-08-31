@@ -27,35 +27,19 @@
 
 /* Load jquery ui css assets
  * ----------------------------------------------------------------------------- */
-  modXwsContentHelper::loadJqueryUiStylesheets($params, array('scrollable-vertical' => true));
+  modXwsContentHelper::loadJqueryUiStylesheets($params, array('scrollable-horizontal' => true));
 
 ?>
 <?php
 /**
- * vertical scrollable previous & next buttons
- * ----------------------------------------------------------------------------------------------------------------- */
-?>
-<div id="actions">
-  <a class="prev disabled ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary">
-    <span class="ui-button-icon-primary ui-icon ui-icon-carat-1-n"></span>
-    <span class="ui-button-text"><?php echo JText::_('PREVIOUS_SCROLLABLE_ITEM') ?></span>
-  </a>
-  <a class="next ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary">
-    <span class="ui-button-icon-primary ui-icon ui-icon-carat-1-s"></span>
-    <span class="ui-button-text"><?php echo JText::_('NEXT_SCROLLABLE_ITEM') ?></span>
-  </a>
-</div>
-<?php
-/**
- * vertical scrollable implementation
+ * horizontal scrollable implementation
  * ------------------------------------------------------------------------------------------------------------------------------------------------- */
 ?>
-<div id="xwsScrollableVertical<?php echo $module->id; ?>" class="vertical"
-     style="height:<?php echo $params->get('scrollableVerticalHeight') ?>px" >
+<a class="prev browse left"title="<?php echo JText::_('PREVIOUS_SCROLLABLE_ITEM') ?>"></a>
+<div id="xwsScrollableHoriontal<?php echo $module->id; ?>" class="scrollable ui-widget ui-widget-content ui-corner-top" >
   <div class="items">
   <?php foreach ($list as  $item) : ?>
-    <div class="item ui-widget ui-widget-content ui-corner-top textContainer"
-         style="height:<?php echo $params->get('scrollableVerticalItemHeight')?>px" >
+    <div class="item textContainer" >
       <h3 class="ui-widget-header ui-corner-all"><?php echo $item->title; ?></h3>
         <?php echo $item->introtext; ?>
         <p class="xwsReadMoreWrapper">
@@ -67,6 +51,7 @@
   <?php endforeach; ?>
   </div>
 </div>
+<a class="next browse right"title="<?php echo JText::_('NEXT_SCROLLABLE_ITEM') ?>"></a>
 <?php
 /**
  * Setup javascript behavior for the layout
@@ -76,8 +61,9 @@
 // <![CDATA[
   jQuery.noConflict();
   jQuery(document).ready(function(){
-    jQuery('#xwsScrollableVertical<?php echo $module->id ?>').scrollable({
-      vertical: true
+    jQuery('#xwsScrollableHoriontal<?php echo $module->id ?>').scrollable({
+      speed: 700,
+      circular: true
     });
     jQuery.xwsReadmore.buildButtons({
       icon: 'ui-icon-arrowstop-1-e',
