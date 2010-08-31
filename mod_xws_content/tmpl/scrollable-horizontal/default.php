@@ -36,10 +36,12 @@
  * ------------------------------------------------------------------------------------------------------------------------------------------------- */
 ?>
 <a class="prev browse left"title="<?php echo JText::_('PREVIOUS_SCROLLABLE_ITEM') ?>"></a>
-<div id="xwsScrollableHoriontal<?php echo $module->id; ?>" class="scrollable ui-widget ui-widget-content ui-corner-top" >
+<div id="xwsScrollableHoriontal<?php echo $module->id; ?>" class="scrollable ui-widget ui-widget-content ui-corner-top"
+      style="width:<?php echo $params->get('scrollableHorizontalWidth') ?>px; height:<?php echo $params->get('scrollableHorizontalHeight') ?>px;" >
   <div class="items">
   <?php foreach ($list as  $item) : ?>
-    <div class="item textContainer" >
+    <?php /** we substract 20px of padding in scrollableHorizontalHeight and set item width  @see scrollable-horizontal.css */ ?>
+    <div class="item textContainer" style="width:<?php echo $params->get('scrollableHorizontalWidth') - 20 ?>px;" >
       <h3 class="ui-widget-header ui-corner-all"><?php echo $item->title; ?></h3>
         <?php echo $item->introtext; ?>
         <p class="xwsReadMoreWrapper">

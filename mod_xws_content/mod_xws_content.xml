@@ -86,9 +86,17 @@
 
 	<params group="other">
 
-		<param name="scrollableVerticalHeight" type="text" default="300" label="SCROLLABLE_VERTICAL_HEIGHT_LABEL" description="SCROLLABLE_VERTICAL_HEIGHT_DESC" />
+<!--	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Scrollable Vertical Configuration ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<param name="scrollableVerticalHeight" type="text" default="300" label="SCROLLABLE_VERTICAL_HEIGHT_LABEL"
+           description="SCROLLABLE_VERTICAL_HEIGHT_DESC" />
 		<param name="scrollableVerticalItemHeight" type="text" default="150" label="SCROLLABLE_VERTICAL_ITEM_HEIGHT_LABEL"
            description="SCROLLABLE_VERTICAL_ITEM__DESC" />
+
+<!--	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Scrollable Horizontal Configuration ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <param name="scrollableHorizontalWidth" type="text" default="600" label="SCROLLABLE_HORIZONTAL_WIDTH_LABEL"
+           description="SCROLLABLE_HORIZONTAL_WIDTH_DESC" />
+    <param name="scrollableHorizontalHeight" type="text" default="300" label="SCROLLABLE_HORIZONTAL_HEIGHT_LABEL"
+           description="SCROLLABLE_HORIZONTAL_HEIGHT_DESC" />
 
 	</params>
 
