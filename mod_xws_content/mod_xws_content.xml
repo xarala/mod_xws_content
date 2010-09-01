@@ -3,13 +3,13 @@
 
 <!--	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Metadata Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<name>xws_content</name>
-	<author>Xws_Joomla</author>
+	<author>Xws~Joomla</author>
 	<creationDate>May 2010</creationDate>
 	<copyright>Copyright (C) 2010 Xarala Web Studios ~ Joomla Branch. All rights reserved.</copyright>
 	<license>GPL</license>
 	<authorEmail>pathe.sene@gmail.com</authorEmail>
 	<authorUrl>www.xarala.sn</authorUrl>
-	<version>0.6.7</version>
+	<version>0.6.8</version>
 	<description>
   <![CDATA[
     <h2>Xws_Content: displaying joomla content items made stupid simple</h2>
@@ -31,7 +31,7 @@
     <folder>elements</folder>
     <folder>images</folder>
     <folder>js</folder>
-    <folder>licences</folder>
+    <folder>licenses</folder>
     <folder>tmpl</folder>
 	</files>
 
