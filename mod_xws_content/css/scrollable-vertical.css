@@ -21,7 +21,7 @@
 /* elements inside single item */
 .item img { float:left;	margin-right:20px; }
 
-.item h3 { padding:0.5em 1em 0.3em;	margin: 0; font-size:16px; font-weight:normal; }
+.item h3 {  }
 .item p { margin: 0;}
 /* the action buttons above the scrollable */
 #actions {
@@ -45,5 +45,20 @@
 
 .next {
 	float:right;
+}
+
+/**
+ * jQuery ui overrides
+ */
+.ui-widget .ui-widget-header {
+  position: relative;
+  padding-left: .9em;
+  padding-bottom: .3em;
+}
+
+.ui-widget .ui-widget-header .ui-icon {
+  left: 0;
+  position:absolute;
+  top:22%;
 }
 

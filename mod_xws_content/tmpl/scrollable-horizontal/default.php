@@ -17,6 +17,27 @@
  * ----------------------------------------------------------------------------- */
   defined('_JEXEC') or die('Restricted access');
 
+/* Load jquery ui css assets
+ * ----------------------------------------------------------------------------- */
+  modXwsContentHelper::loadJqueryUiStylesheets($params, array('scrollable-horizontal' => true));
+
+/**
+ * Add Some Inline css styles
+ * ------------------------------------------------------------------------------- */
+
+  /**
+   * override scrollableHorizontal width & height with user given parameters
+   */
+  $css  = "#xwsScrollableHoriontal" . $module->id ."{ width:" . (int)$params->get('scrollableHorizontalWidth') . "px; height:" . (int)$params->get('scrollableHorizontalHeight') . "px;}";
+  /**
+   * we substract 20px of padding in scrollableHorizontalHeight and set item width  @see scrollable-horizontal.css
+   */
+  $css .= "#xwsScrollableHoriontal" . $module->id ." .item { width: " . (int)($params->get('scrollableHorizontalWidth') - 20 ). "px;}";
+  /**
+   *Add $css to the document object
+   */
+  $this->_doc->addStyleDeclaration($css);
+
 /**
  * Load javascript assets
  * jquery
@@ -25,10 +46,6 @@
   modXwsContentHelper::loadJquery($params);
   modXwsContentHelper::loadJqueryTools($params);
 
-/* Load jquery ui css assets
- * ----------------------------------------------------------------------------- */
-  modXwsContentHelper::loadJqueryUiStylesheets($params, array('scrollable-horizontal' => true));
-
 ?>
 <?php
 /**
@@ -36,19 +53,20 @@
  * ------------------------------------------------------------------------------------------------------------------------------------------------- */
 ?>
 <a class="prev browse left"title="<?php echo JText::_('PREVIOUS_SCROLLABLE_ITEM') ?>"></a>
-<div id="xwsScrollableHoriontal<?php echo $module->id; ?>" class="scrollable ui-widget ui-widget-content ui-corner-top"
-      style="width:<?php echo $params->get('scrollableHorizontalWidth') ?>px; height:<?php echo $params->get('scrollableHorizontalHeight') ?>px;" >
+<div id="xwsScrollableHoriontal<?php echo $module->id; ?>" class="scrollable ui-widget ui-widget-content ui-corner-top" >
   <div class="items">
   <?php foreach ($list as  $item) : ?>
-    <?php /** we substract 20px of padding in scrollableHorizontalHeight and set item width  @see scrollable-horizontal.css */ ?>
-    <div class="item textContainer" style="width:<?php echo $params->get('scrollableHorizontalWidth') - 20 ?>px;" >
-      <h3 class="ui-widget-header ui-corner-all"><?php echo $item->title; ?></h3>
-        <?php echo $item->introtext; ?>
-        <p class="xwsReadMoreWrapper">
-          <a href="<?php echo $item->link; ?>" title="<?php echo $item->title; ?>" >
-            <?php echo Jtext::_("XWS_CONTENT_READ_MORE"); ?>
-          </a>
-        </p>
+    <div class="item textContainer">
+      <h3 class="ui-widget-header ui-corner-all">
+        <span class="ui-icon ui-icon-carat-2-n-s"></span>
+        <?php echo $item->title; ?>
+      </h3>
+      <?php echo $item->introtext; ?>
+      <p class="xwsReadMoreWrapper">
+        <a href="<?php echo $item->link; ?>" title="<?php echo $item->title; ?>" >
+          <?php echo Jtext::_("XWS_CONTENT_READ_MORE"); ?>
+        </a>
+      </p>
    </div>
   <?php endforeach; ?>
   </div>

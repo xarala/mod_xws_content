@@ -9,15 +9,14 @@
 	<license>GPL</license>
 	<authorEmail>pathe.sene@gmail.com</authorEmail>
 	<authorUrl>www.xarala.sn</authorUrl>
-	<version>0.6.5</version>
+	<version>0.6.6</version>
 	<description>
   <![CDATA[
     <h2>Xws_Content: displaying joomla content items made stupid simple</h2>
     <ul>
       <li>Originally forked from mod_mostread.</li>
       <li>Xws_Content let you display list of joomla core content items with fancy jquery effects</li>
-      <li>Dozen of themes are bundled</li>
-      <li>You can add more themes here</li>
+      <li>Bundled with dozen of jQuery Ui themes </li>
     </ul>
   ]]>
   </description>
@@ -86,13 +85,13 @@
 
 	<params group="other">
 
-<!--	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Scrollable Vertical Configuration ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-		<param name="scrollableVerticalHeight" type="text" default="300" label="SCROLLABLE_VERTICAL_HEIGHT_LABEL"
+    <!--	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Scrollable Vertical Configuration ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<param name="scrollableVerticalHeight" type="text" default="400" label="SCROLLABLE_VERTICAL_HEIGHT_LABEL"
            description="SCROLLABLE_VERTICAL_HEIGHT_DESC" />
-		<param name="scrollableVerticalItemHeight" type="text" default="150" label="SCROLLABLE_VERTICAL_ITEM_HEIGHT_LABEL"
+		<param name="scrollableVerticalItemHeight" type="text" default="200" label="SCROLLABLE_VERTICAL_ITEM_HEIGHT_LABEL"
            description="SCROLLABLE_VERTICAL_ITEM__DESC" />
 
-<!--	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Scrollable Horizontal Configuration ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Scrollable Horizontal Configuration ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <param name="scrollableHorizontalWidth" type="text" default="600" label="SCROLLABLE_HORIZONTAL_WIDTH_LABEL"
            description="SCROLLABLE_HORIZONTAL_WIDTH_DESC" />
     <param name="scrollableHorizontalHeight" type="text" default="300" label="SCROLLABLE_HORIZONTAL_HEIGHT_LABEL"

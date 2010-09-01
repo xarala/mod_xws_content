@@ -17,6 +17,21 @@
  * ----------------------------------------------------------------------------- */
   defined('_JEXEC') or die('Restricted access');
 
+
+/* Load jquery ui css assets
+ * ----------------------------------------------------------------------------- */
+  modXwsContentHelper::loadJqueryUiStylesheets($params, array('scrollable-vertical' => true));
+  /**
+   * override height for this instance of scrollableHorizontal
+   */
+  $css  = "#xwsScrollableVertical" . $module->id . "{height:" . $params->get('scrollableVerticalHeight') . "px;}";
+  $css .= "#xwsScrollableVertical" . $module->id . " .item{height:" . $params->get('scrollableVerticalItemHeight') . "px;}";
+
+  /**
+   *Add $css to the document object
+   */
+  $this->_doc->addStyleDeclaration($css);
+
 /**
  * Load javascript assets
  * jquery
@@ -24,10 +39,6 @@
  * ----------------------------------------------------------------------------- */
   modXwsContentHelper::loadJquery($params);
   modXwsContentHelper::loadJqueryTools($params);
-
-/* Load jquery ui css assets
- * ----------------------------------------------------------------------------- */
-  modXwsContentHelper::loadJqueryUiStylesheets($params, array('scrollable-vertical' => true));
 
 ?>
 <?php
@@ -50,13 +61,14 @@
  * vertical scrollable implementation
  * ------------------------------------------------------------------------------------------------------------------------------------------------- */
 ?>
-<div id="xwsScrollableVertical<?php echo $module->id; ?>" class="vertical"
-     style="height:<?php echo $params->get('scrollableVerticalHeight') ?>px" >
+<div id="xwsScrollableVertical<?php echo $module->id; ?>" class="vertical" >
   <div class="items">
   <?php foreach ($list as  $item) : ?>
-    <div class="item ui-widget ui-widget-content ui-corner-top textContainer"
-         style="height:<?php echo $params->get('scrollableVerticalItemHeight')?>px" >
-      <h3 class="ui-widget-header ui-corner-all"><?php echo $item->title; ?></h3>
+    <div class="item ui-widget ui-widget-content ui-corner-top textContainer" >
+      <h3 class="ui-widget-header ui-corner-all">
+        <span class="ui-icon ui-icon-carat-2-n-s"></span>
+        <?php echo $item->title; ?>
+      </h3>
         <?php echo $item->introtext; ?>
         <p class="xwsReadMoreWrapper">
           <a href="<?php echo $item->link; ?>" title="<?php echo $item->title; ?>" >

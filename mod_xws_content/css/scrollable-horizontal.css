@@ -77,3 +77,19 @@ a.left				{ margin-left: 0px; }
 a.left:hover  		{ background-position:-30px 0; }
 a.left:active  	{ background-position:-60px 0; }
 
+
+/**
+ * jQuery ui overrides
+ */
+.ui-widget .ui-widget-header {
+  position: relative;
+  padding-left: .9em;
+  padding-bottom: .3em;
+}
+
+.ui-widget .ui-widget-header .ui-icon {
+  left: 0;
+  position:absolute;
+  top:22%;
+}
+
