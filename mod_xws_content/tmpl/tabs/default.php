@@ -17,6 +17,11 @@
 /* No direct access to joomla filesystem
  * ----------------------------------------------------------------------------- */
   defined('_JEXEC') or die('Restricted access');
+
+/* Load jquery ui css assets
+ * ----------------------------------------------------------------------------- */
+  modXwsContentHelper::loadJqueryUiStylesheets($params);
+
 /**
  * Load javascript assets
  * jquery
@@ -24,11 +29,18 @@
  * ----------------------------------------------------------------------------- */
   modXwsContentHelper::loadJquery($params);
   modXwsContentHelper::loadJqueryUi($params);
-
-/* Load jquery ui css assets
- * ----------------------------------------------------------------------------- */
-  modXwsContentHelper::loadJqueryUiStylesheets($params);
-
+  $this->_doc->addScriptDeclaration("
+  // <![CDATA[
+    jQuery.noConflict();
+    jQuery(document).ready(function(){
+      jQuery.xwsUiHelpers.enableTabs();
+      jQuery.xwsReadmore.buildButtons({
+        icon: 'ui-icon-arrowstop-1-e',
+        wrapper: 'p.xwsReadMoreWrapper'
+      });
+    });
+  // ]]>
+  ");
 ?>
 <div id = "xwsTabs<?php echo $module->id; ?>">
   <ul class=" <?php echo $params->get('moduleclass_sfx'); ?>">
@@ -49,21 +61,4 @@
     </div>
   <?php endforeach; ?>
 </div>
-<?php
-/**
- * Setup javascript behavior for the layout
- */
-?>
-<script type="text/javascript" language="javascript" charset="utf-8">
-  // <![CDATA[
-    jQuery.noConflict();
-    jQuery(document).ready(function(){
-      jQuery.xwsUiHelpers.enableTabs();
-      jQuery.xwsReadmore.buildButtons({
-        icon: 'ui-icon-arrowstop-1-e',
-        wrapper: 'p.xwsReadMoreWrapper'
-      });
-    });
-  // ]]>
-</script>
 

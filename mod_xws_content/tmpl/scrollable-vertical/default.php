@@ -39,6 +39,20 @@
  * ----------------------------------------------------------------------------- */
   modXwsContentHelper::loadJquery($params);
   modXwsContentHelper::loadJqueryTools($params);
+  $this->_doc->addScriptDeclaration("
+  // <![CDATA[
+    jQuery.noConflict();
+    jQuery(document).ready(function(){
+      jQuery('#xwsScrollableVertical" . $module->id . "').scrollable({
+        vertical: true
+      });
+      jQuery.xwsReadmore.buildButtons({
+        icon: 'ui-icon-arrowstop-1-e',
+        wrapper: 'p.xwsReadMoreWrapper'
+      });
+    });
+  // ]]>
+  ");
 
 ?>
 <?php
@@ -79,23 +93,4 @@
   <?php endforeach; ?>
   </div>
 </div>
-<?php
-/**
- * Setup javascript behavior for the layout
- */
-?>
-<script type="text/javascript" language="javascript" charset="utf-8">
-// <![CDATA[
-  jQuery.noConflict();
-  jQuery(document).ready(function(){
-    jQuery('#xwsScrollableVertical<?php echo $module->id ?>').scrollable({
-      vertical: true
-    });
-    jQuery.xwsReadmore.buildButtons({
-      icon: 'ui-icon-arrowstop-1-e',
-      wrapper: 'p.xwsReadMoreWrapper'
-    });
-  });
-// ]]>
-</script>
 

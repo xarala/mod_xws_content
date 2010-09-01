@@ -16,6 +16,10 @@
  * ----------------------------------------------------------------------------- */
   defined('_JEXEC') or die('Restricted access');
 
+/* Load jquery ui css assets
+ * ----------------------------------------------------------------------------- */
+  modXwsContentHelper::loadJqueryUiStylesheets($params);
+
 /**
  * Load javascript assets
  * jquery
@@ -23,13 +27,19 @@
  * ----------------------------------------------------------------------------- */
   modXwsContentHelper::loadJquery($params);
   modXwsContentHelper::loadJqueryUi($params);
-
-/* Load jquery ui css assets
- * ----------------------------------------------------------------------------- */
-  modXwsContentHelper::loadJqueryUiStylesheets($params);
-
+  $this->_doc->addScriptDeclaration("
+  // <![CDATA[
+    jQuery.noConflict();
+    jQuery(document).ready(function(){
+      jQuery.xwsUiHelpers.enableAccordions();
+      jQuery.xwsReadmore.buildButtons({
+        icon: 'ui-icon-arrowstop-1-e',
+        wrapper: 'p.xwsReadMoreWrapper'
+      });
+    });
+  // ]]>
+  ");
 ?>
-
 <div id = "xwsAccordionModule<?php echo $module->id; ?>">
   <?php foreach ($list as  $item) : ?>
   <h3><a href="#" rel="nofollow" title="<?php echo $item->title; ?>"><?php echo $item->title; ?></a></h3>
@@ -43,21 +53,4 @@
   </div>
   <?php endforeach; ?>
 </div>
-<?php
-/**
- * Setup javascript behavior for the layout
- */
-?>
-<script type="text/javascript" language="javascript" charset="utf-8">
-// <![CDATA[
-  jQuery.noConflict();
-  jQuery(document).ready(function(){
-    jQuery.xwsUiHelpers.enableAccordions();
-    jQuery.xwsReadmore.buildButtons({
-      icon: 'ui-icon-arrowstop-1-e',
-      wrapper: 'p.xwsReadMoreWrapper'
-    });
-  });
-// ]]>
-</script>
 
