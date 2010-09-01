@@ -9,7 +9,7 @@
 	<license>GPL</license>
 	<authorEmail>pathe.sene@gmail.com</authorEmail>
 	<authorUrl>www.xarala.sn</authorUrl>
-	<version>0.6.8</version>
+	<version>0.6.9</version>
 	<description>
   <![CDATA[
     <h2>Xws_Content: displaying joomla content items made stupid simple</h2>
@@ -84,6 +84,16 @@
 	</params>
 
 	<params group="other">
+
+    <!--	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Items Heading Tag ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<param name="itemHeadingTag" type="radio" default="h3" label="XWS_ITEM_HEADING_TAG_LABEL" description="XWS_ITEM_HEADING_TAG_DESC">
+			<option value="h1">h1</option>
+			<option value="h2">h2</option>
+			<option value="h3">h3</option>
+			<option value="h4">h4</option>
+			<option value="h5">h5</option>
+			<option value="h6">h6</option>
+		</param>
 
     <!--	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Scrollable Vertical Configuration ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 		<param name="scrollableVerticalHeight" type="text" default="400" label="SCROLLABLE_VERTICAL_HEIGHT_LABEL"

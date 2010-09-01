@@ -71,10 +71,10 @@
   <div class="items">
   <?php foreach ($list as  $item) : ?>
     <div class="item textContainer">
-      <h3 class="ui-widget-header ui-corner-all">
+      <<?php echo $params->get('itemHeadingTag') ?> class="ui-widget-header ui-corner-all">
         <span class="ui-icon ui-icon-carat-2-n-s"></span>
         <?php echo $item->title; ?>
-      </h3>
+      </<?php echo $params->get('itemHeadingTag') ?>>
       <?php echo $item->introtext; ?>
       <p class="xwsReadMoreWrapper">
         <a href="<?php echo $item->link; ?>" title="<?php echo $item->title; ?>" >
