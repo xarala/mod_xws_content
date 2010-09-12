@@ -20,7 +20,7 @@ The module is under nigthtly development so we expect to add more widgets
 
 ## Production Ready: YES! ##
  * The Xws_Content joomla module is optimized for production websites as it can load all javascript(jQuery & jQuery-ui) & css(jQuery-ui) from google ajax librairies.
- * This can speed up response times as google's servers are optimized for serving static assets than your shared hosting server
+ * This can speed up response times as google's servers are more optimized for serving static assets than your shared hosting server
  * Static assets are served from multiple hosts.
 
 ## Contributors ##
