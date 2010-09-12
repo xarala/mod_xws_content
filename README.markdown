@@ -9,6 +9,7 @@ We use jQuery & jQuery Ui to give your website visitors a great user experience.
 As of this writing the  module has include the two jQuery Ui widgets:
  * tabs
  * accordion
+ * scrollable
 The module is under nigthtly development so we expect to add more widgets
 
 ## Theming the module ##
