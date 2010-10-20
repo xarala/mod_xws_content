@@ -83,14 +83,17 @@ class modXwsContentHelper
   {
     if ($params->get('load_javascripts') == 1)
     {
-      if ($params->get('environment') == 0)
-      {
-        JHTML::script('jquery-ui-1.8.4.js', _XWS_CONTENT_JS_PATH, false);
-      }
-      else
-      {
-          #TODO load_jquery_ui from google ajax apis
-      }
+        if ($params->get('load_jquery_ui_javascripts') == 1)
+        {
+             if ($params->get('environment') == 0)
+              {
+                JHTML::script('jquery-ui-1.8.4.js', _XWS_CONTENT_JS_PATH, false);
+              }
+              else
+              {
+                  #TODO load_jquery_ui from google ajax apis
+              }               
+        }
     }
   }
   /**
@@ -111,14 +114,20 @@ class modXwsContentHelper
     /* Set the user desired theme
      * Load the user desired theme
      * --------------------------------------------------------------------------------- */
-      if ($params->get('environment') == 0)
-      {
-        JHTML::stylesheet('jquery-ui.css', _XWS_CONTENT_CSS_PATH.DS.$params->get('jquery-ui-theme').DS, array());
-      }
-      else
-      {
-         #TODO load_jquery_ui_stylesheets from google ajax apis
-      }
+     if ($params->get('load_jquery_ui_stylesheets') == 1)
+     {
+        
+          if ($params->get('environment') == 0)
+          {
+            JHTML::stylesheet('jquery-ui.css', _XWS_CONTENT_CSS_PATH.DS.$params->get('jquery-ui-theme').DS, array());
+          }
+          else
+          {
+             #TODO load_jquery_ui_stylesheets from google ajax apis
+          }
+         
+     }
+
 
       JHTML::stylesheet('xws-content.css', _XWS_CONTENT_CSS_PATH, array());
 

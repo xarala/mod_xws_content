@@ -75,6 +75,18 @@
 			<option value="1">YES</option>
 			<option value="0">NO</option>
 		</param>
+		
+		<param name="load_jquery_ui_stylesheets" type="radio" default="1" 
+		       label="XWS_LOAD_JQUERY_UI_STYLESHEETs_LABEL" description="XWS_LOAD_JQUERY_UI_STYLESHEETS_DESC">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		
+		<param name="load_jquery_ui_javascripts" type="radio" default="1" 
+		       label="XWS_LOAD_JQUERY_UI_JAVASCRIPTS_LABEL" description="XWS_LOAD_JQUERY_UI_JAVASCRIPTS_DESC">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>		
 
 		<param name="load_javascripts" type="radio" default="1" label="XWS_LOAD_JAVASCRIPTS_LABEL" description="XWS_LOAD_JAVASCRIPTS_DESC">
 			<option value="1">YES</option>
