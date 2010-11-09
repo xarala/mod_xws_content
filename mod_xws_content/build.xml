@@ -10,15 +10,21 @@
     </fileset>
     
   <!-- 
-    Defining phing propeerties
-     src: the source forlder
-     test: a working joomla installation directory
+    Defining phing properties
+     * src: the source forlder
+     * test: set this to the abolute path to the mod_xws_content's folder in 
+           your joomla testing environment.
     
   -->
 
-    <property name="src"   value="."/>
+    <property name="src"   value="."/>    
     <property name="test"  value="/home/xarala/projects/ramatou/modules/mod_xws_content" />
     
+  <!-- 
+    Default Task
+     * copy source files in test environment
+    
+  -->    
     <target name="copy_to_test_env" description="targetting dev environment">
       <echo message="Running build.xml. Copying files from dev to test..." />
       <copy todir="${test}">
