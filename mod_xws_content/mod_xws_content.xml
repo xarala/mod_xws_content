@@ -27,11 +27,11 @@
 		<filename module="mod_xws_content">index.html</filename>
 		<filename module="mod_xws_content">helper.php</filename>
 		<filename module="mod_xws_content">mod_xws_content.php</filename>
+    <folder>credits</folder>
     <folder>css</folder>
     <folder>elements</folder>
     <folder>images</folder>
     <folder>js</folder>
-    <folder>licences</folder>
     <folder>tmpl</folder>
 	</files>
 
@@ -60,6 +60,10 @@
 
 		<param name="@spacer" type="spacer" default="" label="" description="" />
 		<param name="show_front" type="radio" default="1" label="XWS_SHOW_FRONTPAGE_ITEMS_LABEL" description="XWS_SHOW_FRONTPAGE_ITEMS_DESC">
+			<option value="1">show</option>
+			<option value="0">hide</option>
+		</param>
+		<param name="show_item_title" type="radio" default="1" label="XWS_show_item_title_LABEL" description="XWS_show_item_title_DESC">
 			<option value="1">show</option>
 			<option value="0">hide</option>
 		</param>

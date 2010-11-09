@@ -70,11 +70,13 @@
 <div id="xwsScrollableHoriontal<?php echo $module->id; ?>" class="scrollable ui-widget ui-widget-content ui-corner-top" >
   <div class="items">
   <?php foreach ($list as  $item) : ?>
-    <div class="item textContainer">
+    <div class="item textContainer">    
+      <?php if($params->get('show_item_title') == 1): ?>    
       <h3 class="ui-widget-header ui-corner-all">
         <span class="ui-icon ui-icon-carat-2-n-s"></span>
         <?php echo $item->title; ?>
       </h3>
+      <?php endif ?>
       <?php echo $item->introtext; ?>
       <p class="xwsReadMoreWrapper">
         <a href="<?php echo $item->link; ?>" title="<?php echo $item->title; ?>" >
