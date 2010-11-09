@@ -23,9 +23,8 @@
 
 <!--	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Files Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<files>
-		<filename module="mod_xws_content">authors.txt</filename>
-		<filename module="mod_xws_content">index.html</filename>
-		<filename module="mod_xws_content">helper.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
 		<filename module="mod_xws_content">mod_xws_content.php</filename>
     <folder>credits</folder>
     <folder>css</folder>
@@ -52,7 +51,7 @@
 
 		<param name="jquery-ui-template" type="moduletemplate" modulename="mod_xws_content" default="accordion"
 		    label="XWS_MODULE_LAYOUT" description="XWS_MODULE_LAYOUT_DESC" />
-		<param name="jquery-ui-theme" type="csstemplate" modulename="mod_xws_content" default="blitzer"
+		<param name="jquery-ui-theme" type="csstemplate" modulename="mod_xws_content" default="dot-luv"
       label="XWS_JQUERY_UI_THEME_LABEL" description="XWS_JQUERY_UI_THEME_DESC" />
 
 		<param name="@spacer" type="spacer" default="" label="" description="" />

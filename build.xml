@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="xws content" default="" basedir=".">
+
+  <!-- 
+    Fileset for all files in the mod_xws_content folder
+    
+  -->
+    <fileset dir="." id="all_module_files">
+        <include name="**" />
+        <exclude name="language/**" />
+        <exclude name="build/**" />
+        <exclude name="build.xml" />
+    </fileset>
+    
+  
+    <fileset dir="./mod_xws_content" id="installer_files">
+        <include name="**" />
+        <exclude name=".git/**" />
+        <exclude name=".translations/**" />
+    </fileset>
+    
+  <!-- 
+    Defining phing properties
+     * src: the source forlder
+     * test: set this to the abolute path to the mod_xws_content's folder in 
+           your joomla testing environment.
+    
+  -->
+
+    <property name="src"   value="."/>    
+    <property name="test"  value="/home/xarala/projects/ramatou/modules/mod_xws_content" />
+    
+  <!-- 
+    Default Task
+     * copy source files in test environment
+    
+  -->    
+    <target name="copy_to_test_env" description="targetting dev environment">
+    
+      <echo message="Running build.xml. Copying files from dev to test..." />
+      <copy todir="${test}">
+          <fileset refid="all_module_files" />
+      </copy>
+      <echo message="Files copied from dev to test!" />
+      
+    </target>
+    
+    <target name="installer" depends="copy_to_test_env">
+        <echo msg="Creating xws content archive..." />
+
+        <tar destfile="build/build.tar.gz" compression="gzip">
+            <fileset refid="installer_files" />
+        </tar>
+
+        <echo msg="Files copied and compressed in build directory OK!" />
+    </target>
+    
+    
+        
+</project>

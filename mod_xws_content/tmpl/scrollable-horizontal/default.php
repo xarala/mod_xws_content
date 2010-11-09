@@ -53,7 +53,8 @@
     jQuery(document).ready(function(){
       jQuery('#xwsScrollableHoriontal" . $module->id . "')
           .scrollable({
-            circular: true
+            circular: true,
+            speed: 1400
           })
           .autoscroll({ 
             autoplay: true
