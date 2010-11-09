@@ -3,4 +3,5 @@
 *.zip
 *.tar.gz
 *.tgz
+mod_xws_content/build.xml
 
