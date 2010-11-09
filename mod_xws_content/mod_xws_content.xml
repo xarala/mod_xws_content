@@ -39,9 +39,6 @@
   <languages folder="language/en-GB">
 		<language tag="en-GB">en-GB.mod_xws_content.ini</language>
   </languages>
-  <languages folder="language/fr-FR">
-		<language tag="fr-FR">fr-FR.mod_xws_content.ini</language>
-  </languages>
 
 <!--	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Parameters Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<params addpath="/modules/mod_xws_content/elements/">
