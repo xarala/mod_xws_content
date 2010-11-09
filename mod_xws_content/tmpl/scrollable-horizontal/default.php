@@ -57,7 +57,7 @@
             speed: 1400
           })
           .autoscroll({ 
-            autoplay: true
+            autoplay: " . $params->get('autoplay_scrollable') . "
           });
           
       jQuery.xwsReadmore.buildButtons({

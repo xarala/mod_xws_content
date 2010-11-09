@@ -97,9 +97,17 @@
 
 	<params group="other">
 
-    <!--	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Scrollable Vertical Configuration ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--	
+      Scrollable Vertical Configuration
+    -->
+    
+		<param name="autoplay_scrollable" type="radio" default="1" label="XWS_autoplay_scrollable_LABEL" description="XWS_autoplay_scrollable_DESC">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
 		<param name="scrollableVerticalHeight" type="text" default="400" label="SCROLLABLE_VERTICAL_HEIGHT_LABEL"
            description="SCROLLABLE_VERTICAL_HEIGHT_DESC" />
+           
 		<param name="scrollableVerticalItemHeight" type="text" default="200" label="SCROLLABLE_VERTICAL_ITEM_HEIGHT_LABEL"
            description="SCROLLABLE_VERTICAL_ITEM__DESC" />
 

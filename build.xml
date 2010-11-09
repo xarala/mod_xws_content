@@ -45,9 +45,14 @@
       
     </target>
     
-    <target name="installer" depends="copy_to_test_env">
+    <target name="installer">
+        
+        <echo msg="Deleting old archive" />
+    
+        <delete file="build/build.tar.gz" />
+        
         <echo msg="Creating xws content archive..." />
-
+        
         <tar destfile="build/build.tar.gz" compression="gzip">
             <fileset refid="installer_files" />
         </tar>
