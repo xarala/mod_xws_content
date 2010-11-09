@@ -47,16 +47,23 @@
   modXwsContentHelper::loadJqueryTools($params);
   $this->_doc->addScriptDeclaration("
   // <![CDATA[
+  
     jQuery.noConflict();
+    
     jQuery(document).ready(function(){
-      jQuery('#xwsScrollableHoriontal" . $module->id . "').scrollable({
-        speed: 700,
-        circular: true
-      });
+      jQuery('#xwsScrollableHoriontal" . $module->id . "')
+          .scrollable({
+            circular: true
+          })
+          .autoscroll({ 
+            autoplay: true
+          });
+          
       jQuery.xwsReadmore.buildButtons({
         icon: 'ui-icon-arrowstop-1-e',
         wrapper: 'p.xwsReadMoreWrapper'
       });
+      
     });
   // ]]>
   ");
